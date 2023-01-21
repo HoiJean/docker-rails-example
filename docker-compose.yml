@@ -10,8 +10,6 @@ x-app: &default-app
   depends_on:
     - "postgres"
     - "redis"
-  env_file:
-    - ".env"
   restart: "$${DOCKER_RESTART_POLICY:-unless-stopped}"
   stop_grace_period: "3s"
   tty: true
